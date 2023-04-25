@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123456</property>
+
+    <property name="connection.url">jdbc:mysql://localhost:3306/travel?serverTimezone=GMT</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.AttractionsEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.HotelEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.SysUserEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.TravelRouteEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.TravelStrategyEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.UserEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.UserAttractionsEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.UserHotelEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.UserRouteEntity"/>
+    <mapping class="hue.edu.xiong.volunteer_travel.model.UserStrategyEntity"/>
+
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
