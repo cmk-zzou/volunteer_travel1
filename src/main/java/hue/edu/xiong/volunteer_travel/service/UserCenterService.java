@@ -38,6 +38,8 @@ public class UserCenterService {
         User oldUser = userRepository.findById(user.getId()).orElseThrow(() -> new ServiceException("用户ID错误!"));
         oldUser.setTelephone(user.getTelephone());
         oldUser.setEmail(user.getEmail());
+        oldUser.setSex(user.getSex());
+        oldUser.setAge(user.getAge());
         userRepository.deleteById(user.getId());
         userRepository.save(oldUser);
         return ResultGenerator.genSuccessResult();

@@ -20,8 +20,26 @@ public class User {
     private String telephone;
     @Column(name = "email")
     private String email;
+    @Column(name = "age")
+    private String age;
+    @Column(name = "sex")
+    private String sex;
 
+    public void setAge(String age) {
+        this.age = age;
+    }
 
+    public String getAge() {
+        return age;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getSex() {
+        return sex;
+    }
 
     public String getEmail() {
         return email;

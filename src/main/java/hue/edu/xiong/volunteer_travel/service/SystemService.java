@@ -145,6 +145,8 @@ public class SystemService {
             hotel.setStatus(oldHotel.getStatus());
             hotel.setCreateDate(oldHotel.getCreateDate());
             hotel.setImage(oldHotel.getImage());
+            hotel.setAddress(oldHotel.getAddress());
+            hotel.setPrice(oldHotel.getPrice());
         }
         hotelRepository.saveAndFlush(hotel);
         return ResultGenerator.genSuccessResult();

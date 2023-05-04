@@ -20,6 +20,7 @@
                     <tr>
                         <th width="150px">酒店名称</th>
                         <th width="170px">酒店照片</th>
+                        <th width="170px">价格</th>
                         <th width="150px">酒店地址</th>
                         <th width="700px">酒店描述</th>
                         <th>操作</th>
@@ -29,6 +30,7 @@
                     <tr th:each="hotel:${page.content}">
                         <td th:text="${hotel.name}"></td>
                         <td><img width="170px" th:src="@{'/images/'+ ${hotel.image} +'.jpg'}"></td>
+                        <td th:text="${hotel.price}"></td>
                         <td th:text="${hotel.address}"></td>
                         <td th:text="${hotel.describe}"></td>
                         <td>
@@ -88,6 +90,13 @@
                                 <label style="color: red">*</label>酒店地址:</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="address" name="address">
+                            </div>
+                        </div>
+                        <div class="form-group m-b-10" style="text-align:right">
+                            <label class="col-sm-4 control-label">
+                                <label style="color: red">*</label>价格:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="price" name="price">
                             </div>
                         </div>
                         <div class="form-group m-b-10" style="text-align:right">

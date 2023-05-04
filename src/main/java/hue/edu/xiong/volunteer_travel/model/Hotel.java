@@ -25,7 +25,17 @@ public class Hotel {
     private Integer status;
     @Column(name = "createDate")
     private Date createDate;
+    @Column(name = "price")
+    private String price;
 //    构造器
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getPrice() {
+        return price;
+    }
 
     public Date getCreateDate() {
         return createDate;
