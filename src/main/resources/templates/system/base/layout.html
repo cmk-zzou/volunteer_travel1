@@ -31,57 +31,60 @@
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 用户模块 <span class="caret"></span></a>
+                        class="fa fa-fw fa-plus"></i> 用户管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/userListUI}">用户管理</a></li>
+                    <li class="dropdown-header"></li>
+                    <li ><a th:href="@{/system/userListUI}">角色管理</a></li>
                 </ul>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 酒店模块 <span class="caret"></span></a>
+                        class="fa fa-fw fa-plus"></i> 酒店管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/hotelListUI}">酒店管理</a></li>
+                    <li class="dropdown-header"></li>
+                    <li ><a th:href="@{/system/hotelListUI}">添加</a></li>
+                    <li ><a th:href="@{/system/hotelListUI}">查询</a></li>
                 </ul>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 景点模块 <span class="caret"></span></a>
+                        class="fa fa-fw fa-plus"></i> 景点管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/attractionsListUI}">景点管理</a></li>
+                    <li class="dropdown-header"></li>
+                    <li ><a th:href="@{/system/attractionsListUI}">查询</a></li>
+                    <li ><a th:href="@{/system/attractionsListUI}">添加</a></li>
                 </ul>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 攻略模块 <span class="caret"></span></a>
+                        class="fa fa-fw fa-plus"></i> 攻略管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/travelStrategyListUI}">审核攻略</a></li>
+                    <li class="dropdown-header"></li>
+                    <li ><a th:href="@{/system/travelStrategyListUI}">审核</a></li>
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i
-                        class="fa fa-fw fa-plus"></i> 路线模块 <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                    <i class="fa fa-fw fa-plus"></i> 路线管理 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">操作</li>
-                    <li><a th:href="@{/system/travelRouteListUI}">路线管理</a></li>
+                    <li class="dropdown-header"></li>
+                    <li ><a th:href="@{/system/travelRouteListUI}">查询</a></li>
+                    <li ><a th:href="@{/system/travelRouteListUI}">添加</a></li>
                 </ul>
             </li>
             <li>
-                <a th:href="@{/system/logout}"><i class="fa fa-fw fa-list-alt"></i> 登出</a>
+                <a th:href="@{/system/logout}"><i class="fa fa-fw fa-list-alt"></i> 退出登录</a>
             </li>
         </ul>
     </nav>
 
-    <div class="row clearfix" style="margin-top: 2px;">
-        <div class="col-md-12 column">
-            <h3 class="text-center">
-                景区信息管理平台
-            </h3>
-        </div>
-    </div>
+<!--    <div class="row clearfix" style="margin-top: 2px;">-->
+<!--        <div class="col-md-12 column">-->
+<!--            <h3 class="text-center">-->
+<!--                景区信息管理平台-->
+<!--            </h3>-->
+<!--        </div>-->
+<!--    </div>-->
     <hr style="height:1px;border:none;border-top:100px solid #555555;"/>
     <!--预留填充模块-->
     <div layout:fragment="content">
