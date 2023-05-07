@@ -8,18 +8,18 @@ import javax.persistence.*;
 @Entity
 @Table(name = "sys_user", schema = "travel", catalog = "")
 public class SysUserEntity {
-    private int id;
+    private String ids;
     private String username;
     private String password;
 
     @Id
-    @Column(name = "id")
-    public int getId() {
-        return id;
+    @Column(name = "ids")
+    public String getIds() {
+        return ids;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIds(String id) {
+        this.ids = ids;
     }
 
     @Basic
@@ -49,7 +49,7 @@ public class SysUserEntity {
 
         SysUserEntity that = (SysUserEntity) o;
 
-        if (id != that.id) return false;
+        if (ids != null ? !ids.equals(that.ids) : that.ids != null) return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
 
@@ -58,7 +58,7 @@ public class SysUserEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = ids != null ? ids.hashCode() : 0;
         result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;

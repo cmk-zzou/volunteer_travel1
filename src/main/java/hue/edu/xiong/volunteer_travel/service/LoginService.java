@@ -2,7 +2,9 @@ package hue.edu.xiong.volunteer_travel.service;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
 import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
+import hue.edu.xiong.volunteer_travel.model.SysUser;
 import hue.edu.xiong.volunteer_travel.model.User;
+import hue.edu.xiong.volunteer_travel.repository.SysUserRepository;
 import hue.edu.xiong.volunteer_travel.repository.UserRepository;
 import hue.edu.xiong.volunteer_travel.util.CookieUitl;
 import hue.edu.xiong.volunteer_travel.util.IdGenerator;
@@ -18,6 +20,9 @@ public class LoginService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private SysUserRepository sysUserRepository;
 
     public Result login(User user, HttpServletResponse response) {
         User userByUsername = userRepository.findUserByUsername(user.getUsername());
@@ -55,4 +60,7 @@ public class LoginService {
         userRepository.save(user);
         return ResultGenerator.genSuccessResult();
     }
+
+
+
 }

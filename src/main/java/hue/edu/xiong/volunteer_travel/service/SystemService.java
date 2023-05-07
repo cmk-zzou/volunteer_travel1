@@ -80,7 +80,27 @@ public class SystemService {
         }, pageable);
         return userPage;
     }
-
+//
+    public Page<SysUser> getsysUserPage(Pageable pageable) {
+        Page<SysUser> sysuserPage = sysUserRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            query.where(predicates.toArray(new Predicate[]{}));
+            query.orderBy(cb.desc(root.get("ids")));
+            return null;
+        }, pageable);
+        return sysuserPage;
+    }
+//
+    @Transactional(rollbackFor = Exception.class)
+    public Result delsysUser(String ids) {
+        sysUserRepository.delete(getsysUserById(ids));
+        return ResultGenerator.genSuccessResult();
+    }
+//
+    public SysUser getsysUserById(String ids) {
+        SysUser sysuser = sysUserRepository.findById(Integer.valueOf(ids)).orElseThrow(() -> new ServiceException("用户ID错误"));
+        return sysuser;
+    }
 
         @Transactional(rollbackFor = Exception.class)
         public Result delUser(String id) {
@@ -149,6 +169,18 @@ public class SystemService {
             hotel.setPrice(oldHotel.getPrice());
         }
         hotelRepository.saveAndFlush(hotel);
+        return ResultGenerator.genSuccessResult();
+    }
+
+//
+    public Result savesysUser(SysUser sysuser) {
+        SysUser sysUserByUsername = sysUserRepository.findSysUserByUsername(sysuser.getUsername());
+        if(sysUserByUsername != null){
+            return ResultGenerator.genFailResult("用户名重复!");
+        }
+        //Todo 这里有一个事务操作
+        sysuser.setIds(IdGenerator.ids());
+        sysUserRepository.save(sysuser);
         return ResultGenerator.genSuccessResult();
     }
 

@@ -1,6 +1,7 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
+import hue.edu.xiong.volunteer_travel.model.SysUser;
 import hue.edu.xiong.volunteer_travel.model.User;
 import hue.edu.xiong.volunteer_travel.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +47,5 @@ public class LoginController {
     public Result register(Model model, User user) {
         return loginService.register(user);
     }
+
 }

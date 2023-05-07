@@ -8,4 +8,8 @@ public class IdGenerator {
 
         return UUID.randomUUID().toString().replaceAll("-", "");
     }
+
+    public static String ids() {
+        return UUID.randomUUID().toString().replaceAll("-", "");
+    }
 }

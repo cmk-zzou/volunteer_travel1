@@ -9,22 +9,19 @@ public class SysUser {
 
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "ids")
+    private String ids;
     @Column(name = "username")
     private String username;
     @Column(name = "password")
     private String password;
 
-    public int getId() {
-
-        return id;
+    public void setIds(String ids) {
+        this.ids = ids;
     }
 
-    public void setId(int id) {
-
-        this.id = id;
+    public String getIds() {
+        return ids;
     }
 
     public String getUsername() {

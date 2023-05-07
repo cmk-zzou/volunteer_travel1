@@ -21,7 +21,19 @@ import javax.servlet.http.HttpServletResponse;
 public class SystemController {
     @Autowired
     private SystemService systemService;
-
+//
+    @RequestMapping("/sysuserListUI")
+    public String sysuserListUI(Model model, @PageableDefault(size = 10) Pageable pageable) {
+        Page<SysUser> page = systemService.getsysUserPage(pageable);
+        model.addAttribute("page",page);
+        return "system/user/syslist";
+    }
+//
+    @RequestMapping("/delsysUser")
+    @ResponseBody
+    public Result delsysUser(String ids) {
+        return systemService.delsysUser(ids);
+    }
 
 
     @RequestMapping("")
@@ -102,6 +114,13 @@ public class SystemController {
         return systemService.saveHotel(hotel);
     }
 
+    @RequestMapping("/savesysUser")
+    @ResponseBody
+    public Result savesysUser(SysUser sysUser) {
+
+        return systemService.savesysUser(sysUser);
+    }
+
     @RequestMapping("/updateStatus")
     @ResponseBody
     public Result updateStatus(String id) {
@@ -114,6 +133,13 @@ public class SystemController {
     public Result getHotelById(String id) {
 
         return ResultGenerator.genSuccessResult(systemService.getHotelById(id));
+    }
+
+    @RequestMapping("/getsysUserById")
+    @ResponseBody
+    public Result getsysUserById(String ids) {
+
+        return ResultGenerator.genSuccessResult(systemService.getsysUserById(ids));
     }
 
     @RequestMapping("/attractionsListUI")
