@@ -53,7 +53,6 @@ dfn {
 
 h1 {
     margin: .67em 0;
-    font-size: 2em
     text-align: center;
     vertical-align: middle;
 }
@@ -1452,7 +1451,9 @@ hr {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
+    text-align: center;
     color: inherit
+
 }
 
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
@@ -1462,8 +1463,9 @@ hr {
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px
 }
 
 .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
@@ -1480,7 +1482,9 @@ hr {
 }
 
 .h1, h1 {
+    text-align: center;
     font-size: 36px
+
 }
 
 .h2, h2 {
@@ -1825,7 +1829,7 @@ pre code {
 
 .container {
     padding-right: 25px;
-    padding-left: 65px;
+    padding-left: 25px;
     margin-right: auto;
     margin-left: auto
 }
@@ -2729,12 +2733,15 @@ th {
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
+    vertical-align: middle;
+    text-align: center;
     border-top: 1px solid #ddd
 }
 
 .table > thead > tr > th {
     vertical-align: bottom;
+    text-align: center;
+    vertical-align: middle;
     border-bottom: 2px solid #ddd
 }
 
@@ -2751,7 +2758,9 @@ th {
 }
 
 .table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
-    padding: 5px
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .table-bordered {
@@ -3854,12 +3863,13 @@ tbody.collapse.in {
 
 .dropdown-menu > li > a {
     display: block;
-    padding: 3px 20px;
+    padding: 15px 20px;
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    text-align: right;
-    color: #333;
+    text-align: center;
+    vertical-align: middle;
+    color:  #fbf4f4;
     white-space: nowrap
 }
 
@@ -4292,7 +4302,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 .nav > li > a {
     position: relative;
     display: block;
-    padding: 10px 15px
+    padding: 30px 25px
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
